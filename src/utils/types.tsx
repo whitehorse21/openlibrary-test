@@ -1,0 +1,110 @@
+export interface SearchQueryParam {
+  q: string;
+  page: number;
+  limit: number;
+}
+export interface BookInfo {
+  author_alternative_name: string[];
+  author_key: string[];
+  author_name: string[];
+  contributor: string[];
+  cover_edition_key: string;
+  cover_i: number;
+  ddc: string[];
+  ebook_access: string;
+  ebook_count_i: number;
+  edition_count: number;
+  edition_key: string[];
+  first_publish_year: number;
+  first_sentence: string[];
+  has_fulltext: boolean;
+  ia: string[];
+  ia_collection: string[];
+  ia_collection_s: string;
+  isbn: string[];
+  key: string;
+  langauge: string[];
+  last_modified_i: number;
+  lcc: string[];
+  lccn: string[];
+  leding_edition_s: string;
+  lending_identifier_s: string;
+  number_of_pages_median: number;
+  oclc: string[];
+  printdisabled_s: string;
+  public_scan_b: boolean;
+  publish_date: string[];
+  publish_place: string[];
+  publish_year: number[];
+  publisher: string[];
+  seed: string[];
+  title: string;
+  title_sort: string;
+  title_suggest: string;
+  type: string;
+  id_goodreads: string[];
+  id_librarything: string[];
+  id_amazon: string[];
+  id_canadian_national_library_archive: string[];
+  id_amazon_it_asin: string[];
+  id_amazon_de_asin: string[];
+  id_amazon_ca_asin: string[];
+  id_amazon_co_uk_asin: string[];
+  id_google: string[];
+  id_bodleian__oxford_university: string[];
+  id_alibris_id: string[];
+  id_british_library: string[];
+  id_paperback_swap: string[];
+  id_depósito_legal: string[];
+  id_wikidata: string[];
+  subject: string[];
+  place: string[];
+  time: string[];
+  person: string[];
+  ia_loaded_id: string[];
+  ia_box_id: string[];
+  ratings_average: number;
+  ratings_sortable: number;
+  ratings_count: number;
+  ratings_count_1: number;
+  ratings_count_2: number;
+  ratings_count_3: number;
+  ratings_count_4: number;
+  ratings_count_5: number;
+  readinglog_count: number;
+  want_to_read_count: number;
+  currently_reading_count: number;
+  already_read_count: number;
+  publisher_facet: string[];
+  person_key: string[];
+  place_key: string[];
+  time_facet: string[];
+  person_facet: string[];
+  subject_facet: string[];
+  _verion_: number;
+  place_facet: string[];
+  lcc_sort: string;
+  author_facet: string[];
+  subject_key: string[];
+  time_key: string[];
+  ddc_sort: string;
+}
+
+export interface SearchResponse {
+  numFound: number;
+  start: number;
+  numFoundExact: boolean;
+  docs: BookInfo[];
+  num_found: number;
+  q: string;
+  offset?: number;
+}
+
+export interface BookDataType {
+  key: React.Key;
+  title: string;
+  author_name: string[];
+  first_publish_year: number;
+  isbn: string[];
+  number_of_pages_median: number;
+}
